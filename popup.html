@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageNotes</title>
+    <style>
+        body {
+            width: 400px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .container {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        textarea {
+            width: 95%;
+            height: 200px;
+            font-size: 14px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        #saveBtn {
+            background-color: #007bff;
+            color: white;
+        }
+        #saveBtn:hover:not(:disabled) {
+            background-color: #0056b3;
+        }
+        #saveBtn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #deleteBtn {
+            background-color: #dc3545;
+            color: white;
+        }
+        #deleteBtn:hover:not(:disabled) {
+            background-color: #a71d2a;
+        }
+        #deleteBtn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #statusMessage {
+            color: green;
+            font-weight: bold;
+            margin-top: 5px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="icon.png" alt="PageNotes Logo" class="logo">
+        <h3>PageNotes</h3>
+        <textarea id="metaInput" placeholder="Enter notes for this site..."></textarea>
+        <button id="saveBtn" disabled>Save</button>
+        <button id="deleteBtn" disabled>Delete</button>
+        <div id="statusMessage"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

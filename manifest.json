@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Page Notes",
+    "version": "1.0",
+    "description": "Store and retrieve meta information for each website.",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "sessions"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "libs/crypto-js.min.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+          }
+    }
+}
